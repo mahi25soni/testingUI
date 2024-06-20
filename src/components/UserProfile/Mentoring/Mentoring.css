@@ -1,0 +1,67 @@
+.userProfileMentoring {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.userProfileMentoring .singleSession {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    max-width: 250px;
+    min-height: 250px;
+    width: 250px;
+    height: 250px;
+    border-radius: 20px;
+    border: 1px solid #E0E0E0;
+    gap: 15px;
+
+}
+.singleSession .session_type {
+    display: block;
+    border-radius: 10px;
+    background-color: #F7F7F7;
+    padding: 4px 15px;
+    font-weight: 500;
+    font-size: 1rem;
+}
+.singleSession .session_name {
+    font-size: 2rem;
+    font-weight: 600
+}
+.singleSession .session_desc {
+    font-size: 18px;
+    font-weight: 300;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limit to 2 lines */
+    -webkit-box-orient: vertical;
+}
+
+.singleSession .goIntoSessionDetail {
+    height: 55px;
+    border-radius: 10px;
+    border: 1px solid #E0E0E0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5rem;
+    font-weight: 600;
+    font-size: 18px;
+
+
+}
+
+.singleSession .goIntoSessionDetail .unlockButton {
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+

@@ -1,0 +1,64 @@
+.userProfileAbout {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.eachCompanyExperience {
+    border-radius: 30px;
+    background-color: #F7F7F7;
+    padding: 30px;
+    display: flex;
+    justify-content: start;
+    gap: 1rem;
+
+}
+
+.experience-item {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: start;
+    gap: 1rem;
+  }
+  .companyLogoContainer {
+    display: inline;
+  }
+
+.writtenExperience {
+    display: inline;
+    flex-grow: 1;
+}
+
+  
+  .experience-item-header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+    gap: 5px;
+  }
+
+  .experience-item-title {
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .experience-item-company {
+    font-weight: 600;
+    font-size: 1.25rem;
+  }
+
+  
+  .experience-item-description {
+    padding-top: 5px;
+    font-weight: 400;
+    font-size: 20px;
+  }
+
+  .experience-item-duration {
+    font-weight: 300;
+    font-size: 1rem;
+  }

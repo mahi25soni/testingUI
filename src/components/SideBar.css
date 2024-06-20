@@ -1,0 +1,77 @@
+.EntireSideBar {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0 auto;
+    padding: 0 30px;
+    width: 300px;
+}
+
+.EntireSideBar .sideBarProfile {
+    display: flex;
+    flex-direction: column; /* Stack the elements vertically */
+    justify-content: space-evenly;
+    align-items: center;    /* Center the child elements */
+    text-align: center;    /* Center vertically */
+    background-color: #F7F7F7;
+    min-height: 340px;
+    border-radius: 30px;
+    border: none;
+    text-align: center; 
+    /* Adjust the min-height as needed */
+}
+
+
+.sideBarProfile img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    max-width: 150px;
+    min-height: 150px;
+}
+.sideBarProfile .sideBarUserInfo p:nth-child(1){
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: black;
+    line-height: 2px;
+}
+
+.sideBarProfile .sideBarUserInfo p:nth-child(2){
+    font-family: sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    color: black;
+    line-height: 0;
+}
+
+
+.EntireSideBar .sideBarApplyPool {
+    min-height: 60px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+
+}
+
+.EntireSideBar .sideBarApplyPool button:nth-child(1){
+    font-size: 1.2rem;
+    font-size: 600;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    width: 220px;
+    max-width: 220px;
+}
+
+.EntireSideBar .sideBarApplyPool button:nth-child(2){
+    font-size: 1.2rem;
+    font-size: 600;
+    background-color: transparent;
+    border-radius: 10px;
+    border: 1px solid #E0E0E0;
+    width: 60px;
+    max-width: 60px;
+
+}

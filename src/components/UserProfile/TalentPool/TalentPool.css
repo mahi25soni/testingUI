@@ -1,0 +1,290 @@
+.userProfileTalentPool {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.userProfileTalentPool .singleCateogory {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 55px;
+    border: 1px solid #E0E0E0;
+    padding: 0 30px;
+}
+
+.userProfileTalentPool .singleCateogory .categoryInfo{
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.userProfileTalentPool .singleCateogory .viewProfileButton {
+  align-self: flex-end;
+  background-color: transparent;
+  display: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.userProfileTalentPool .togglePool {
+    padding: 30px;
+    border: 1px solid #E0E0E0;
+} 
+
+.userProfileTalentPool .togglePool .entirePoolActivies {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+} 
+
+.poolSelectAndSend {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .poolSelectionInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: end;
+  }
+
+  .userProfileTalentPool .togglePool .entirePoolActivies .poolSelectAndSend div {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .togglePool .entirePoolActivies .poolSelectionInfo .numberOfSelection {
+    font-weight: 600;
+  }
+
+  .togglePool .entirePoolActivies .poolSelectionInfo .extraFunctions {
+    border: 1px solid #E0E0E0;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 50px; 
+    min-height: 50px;
+    width: 100px;
+    max-width: 100px;
+  }
+
+  .iconSize20 {
+    width: 20px;
+    height: 20px
+  }
+
+
+
+  .togglePool .poolMemberList {
+    margin-top: 20px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .togglePool .poolMemberList .members {
+    height: 55px;
+    min-height: 55px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+
+  }
+
+  
+  .togglePool .poolMemberList .members .memberNameInfo{
+    
+    width: 230px;
+    max-width: 230px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 20px;
+    border: 1px solid #E0E0E0;
+    font-weight: 600;
+
+  }
+
+  .togglePool .poolMemberList .members .poolMemberFunctions .dropdownIcon {
+    display: none;
+    cursor: pointer;
+    align-items: center;
+  }
+
+    
+  .togglePool .poolMemberList .members .poolMemberFunctions{
+
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+
+  }
+
+  .togglePool .poolMemberList .members .poolMemberFunctions .memberOtherInfo{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 20px;
+    border: 1px solid #E0E0E0;
+    width: 615px;
+    max-width: 615px;
+  }
+
+  .togglePool .poolMemberList .members .poolMemberFunctions .memberOtherInfo .memberSingleOtherInfo {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+    border-radius: 10px;
+    border: 1px solid #E0E0E0;
+    width: 90px;
+    max-width: 90px;
+    height: 30px;
+    min-height: 30px;
+  }
+
+  .togglePool .poolMemberList .members .poolMemberFunctions div:nth-child(2), .togglePool .poolMemberList .members .poolMemberFunctions div:nth-child(3) {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+    border-radius: 10px;
+    border: 1px solid #E0E0E0;
+    width: 55px;
+    max-width: 55px;
+    cursor: pointer;
+
+  }
+
+
+  .userProfileTalentPool .paymentFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom-left-radius:20px; border-bottom-right-radius:20px;
+    min-height: 55px;
+    border: 1px solid #E0E0E0;
+    padding: 0 30px;
+    background-color: #F7F7F7;
+    font-size: 20px;
+
+}
+
+.paymentFooter .unlockButton {
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+
+
+@media (max-width: 600px) {
+  .userProfileTalentPool .singleCateogory {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid #E0E0E0;
+    height: 250px;
+    margin: 0 auto;
+
+  }
+
+  .userProfileTalentPool .singleCateogory .categoryInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-weight: 600;
+    gap: 15px;
+  }
+  .userProfileTalentPool .singleCateogory .categoryInfo .theExtraBar{
+    display: none;
+  }
+
+
+  .userProfileTalentPool .singleCateogory .categoryInfo .categoryName {
+    font-size: 22px;
+    font-weight: 600;
+    align-self: flex-start;
+  }
+
+  .userProfileTalentPool .singleCateogory .categoryInfo .categoryNumber {
+    font-size: 1rem;
+    font-weight: 400;
+    align-self: flex-start;
+    color: #505050;
+  }
+
+
+  .userProfileTalentPool .singleCateogory .bottomCategoryInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    width: 100%;
+  }
+
+  /* .userProfileTalentPool .singleCateogory .categoryPrice {
+    font-size: 0.9rem;
+    font-weight: 600;
+    align-self: flex-start;
+  } */
+
+  .userProfileTalentPool .singleCateogory .viewProfileButton {
+
+    display: block;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 400;
+    border: 1px solid #E0E0E0;
+    border-radius: 40px;
+    background-color: #F7F7F7;
+    padding: 15px 20px;
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+  
+}
+
+
+
+
+  

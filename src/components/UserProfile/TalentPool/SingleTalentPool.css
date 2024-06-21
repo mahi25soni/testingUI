@@ -1,12 +1,12 @@
-.userProfileTalentPool {
+.userProfileDetailedTalentPool {
     margin-top: 20px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    
 
 }
 
-.userProfileTalentPool .singleCateogory {
+.userProfileDetailedTalentPool .singleCateogory {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -15,11 +15,11 @@
     padding: 0 30px;
 }
 
-.userProfileTalentPool .singleCateogory .categoryInfo{
+.userProfileDetailedTalentPool .singleCateogory .categoryInfo{
   font-size: 1.2rem;
   font-weight: 400;
 }
-.userProfileTalentPool .singleCateogory .viewProfileButton {
+.userProfileDetailedTalentPool .singleCateogory .viewProfileButton {
   align-self: flex-end;
   background-color: transparent;
   display: none;
@@ -29,12 +29,12 @@
   font-weight: 600;
 }
 
-.userProfileTalentPool  .togglePool {
+.userProfileDetailedTalentPool .togglePool {
     padding: 30px;
     border: 1px solid #E0E0E0;
 } 
 
-.userProfileTalentPool  .togglePool .entirePoolActivies {
+.userProfileDetailedTalentPool .togglePool .entirePoolActivies {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -54,18 +54,18 @@
     align-items: end;
   }
 
- .userProfileTalentPool .togglePool .entirePoolActivies .poolSelectAndSend div {
+  .userProfileDetailedTalentPool .togglePool .entirePoolActivies .poolSelectAndSend div {
     cursor: pointer;
     display: flex;
     align-items: center;
     gap: 10px;
   }
-
-  .userProfileTalentPool .togglePool .entirePoolActivies .poolSelectionInfo .numberOfSelection {
+.userProfileDetailedTalentPool 
+  .togglePool .entirePoolActivies .poolSelectionInfo .numberOfSelection {
     font-weight: 600;
   }
 
-  .userProfileTalentPool .togglePool .entirePoolActivies .poolSelectionInfo .extraFunctions {
+  .userProfileDetailedTalentPool .togglePool .entirePoolActivies .poolSelectionInfo .extraFunctions {
     border: 1px solid #E0E0E0;
     border-radius: 30px;
     display: flex;
@@ -84,7 +84,7 @@
 
 
 
-  .userProfileTalentPool .togglePool .poolMemberList {
+  .userProfileDetailedTalentPool .togglePool .poolMemberList {
     margin-top: 20px;
     
     display: flex;
@@ -93,19 +93,26 @@
     gap: 10px;
   }
 
-  .userProfileTalentPool .togglePool .poolMemberList .members {
+  .userProfileDetailedTalentPool .togglePool .poolMemberList .members {
+
     height: 55px;
     min-height: 55px;
-
     display: flex;
-    flex-direction: row;
+    gap: 15px;
     justify-content: space-between;
-    
+
+     
 
   }
 
+  .userProfileDetailedTalentPool .togglePool .poolMemberList .members .memberInfo {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+  }
+
   
-  .userProfileTalentPool .togglePool .poolMemberList .members .memberNameInfo{
+  .userProfileDetailedTalentPool .togglePool .poolMemberList .members .memberInfo .memberNameInfo{
     
     width: 230px;
     max-width: 230px;
@@ -120,34 +127,21 @@
 
   }
 
-  .userProfileTalentPool .togglePool .poolMemberList .members .poolMemberFunctions .dropdownIcon {
-    display: none;
-    cursor: pointer;
-    align-items: center;
-  }
-
-    
-  .userProfileTalentPool .togglePool .poolMemberList .members .poolMemberFunctions{
+  .userProfileDetailedTalentPool .togglePool .poolMemberList .members .memberInfo .memberOtherInfo{
 
     display: flex;
     flex-direction: row;
-    gap: 15px;
-
-  }
-
-  .userProfileTalentPool .togglePool .poolMemberList .members .poolMemberFunctions .memberOtherInfo{
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
     align-items: center;
+    justify-content: start;
     border-radius: 20px;
     border: 1px solid #E0E0E0;
     width: 615px;
     max-width: 615px;
+    gap: 10px;
+    padding: 0 20px;
   }
 
-  .userProfileTalentPool .togglePool .poolMemberList .members .poolMemberFunctions .memberOtherInfo .memberSingleOtherInfo {
+  .userProfileDetailedTalentPool .togglePool .poolMemberList .members .memberInfo .memberOtherInfo .memberSingleOtherInfo {
 
     display: flex;
     flex-direction: row;
@@ -162,7 +156,20 @@
     min-height: 30px;
   }
 
-  .userProfileTalentPool .togglePool .poolMemberList .members .poolMemberFunctions div:nth-child(2), .userProfileTalentPool .togglePool .poolMemberList .members .poolMemberFunctions div:nth-child(3) {
+
+
+    
+  .userProfileDetailedTalentPool .togglePool .poolMemberList .members .poolMemberFunctions{
+
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+
+  }
+
+  
+
+  .userProfileDetailedTalentPool .togglePool .poolMemberList .members .poolMemberFunctions div {
 
     display: flex;
     flex-direction: row;
@@ -178,7 +185,7 @@
   }
 
 
-  .userProfileTalentPool .paymentFooter {
+  .userProfileDetailedTalentPool .paymentFooter {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -202,7 +209,7 @@
 
 
 @media (max-width: 600px) {
-  .userProfileTalentPool .singleCateogory {
+  .userProfileDetailedTalentPool .singleCateogory {
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
@@ -215,7 +222,7 @@
 
   }
 
-  .userProfileTalentPool .singleCateogory .categoryInfo {
+  .userProfileDetailedTalentPool .singleCateogory .categoryInfo {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -223,18 +230,18 @@
     font-weight: 600;
     gap: 15px;
   }
-  .userProfileTalentPool .singleCateogory .categoryInfo .theExtraBar{
+  .userProfileDetailedTalentPool .singleCateogory .categoryInfo .theExtraBar{
     display: none;
   }
 
 
-  .userProfileTalentPool .singleCateogory .categoryInfo .categoryName {
+  .userProfileDetailedTalentPool .singleCateogory .categoryInfo .categoryName {
     font-size: 22px;
     font-weight: 600;
     align-self: flex-start;
   }
 
-  .userProfileTalentPool .singleCateogory .categoryInfo .categoryNumber {
+  .userProfileDetailedTalentPool .singleCateogory .categoryInfo .categoryNumber {
     font-size: 1rem;
     font-weight: 400;
     align-self: flex-start;
@@ -242,7 +249,7 @@
   }
 
 
-  .userProfileTalentPool .singleCateogory .bottomCategoryInfo {
+  .userProfileDetailedTalentPool .singleCateogory .bottomCategoryInfo {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -251,13 +258,13 @@
     width: 100%;
   }
 
-  /* .userProfileTalentPool .singleCateogory .categoryPrice {
+  /* .userProfileDetailedTalentPool .singleCateogory .categoryPrice {
     font-size: 0.9rem;
     font-weight: 600;
     align-self: flex-start;
   } */
 
-  .userProfileTalentPool .singleCateogory .viewProfileButton {
+  .userProfileDetailedTalentPool .singleCateogory .viewProfileButton {
 
     display: block;
     cursor: pointer;

@@ -1,5 +1,5 @@
-import React , {useState } from "react";
-import "./TalentPool.css";
+import React, { useState } from "react";
+import "./SingleTalentPool.css";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import {
   MdOutlineWavingHand,
@@ -16,7 +16,6 @@ export default function SingleTalentPool({
   isPoolOpen,
   handleHidePool,
 }) {
-
   const [expandedMembers, setExpandedMembers] = useState({});
   const userExtraDataArray = [
     "city",
@@ -29,7 +28,7 @@ export default function SingleTalentPool({
   const toggleMemberInfo = (id) => {
     setExpandedMembers((prevState) => ({
       ...prevState,
-      [id]: !prevState[id]
+      [id]: !prevState[id],
     }));
   };
 
@@ -37,7 +36,7 @@ export default function SingleTalentPool({
   console.log("details are ", detailedTalentPool);
 
   return (
-    <div className="userProfileTalentPool">
+    <div className="userProfileDetailedTalentPool">
       <div
         key={detailedTalentPool?._id}
         className="singleCateogory"
@@ -127,24 +126,26 @@ export default function SingleTalentPool({
           <div className="poolMemberList">
             {detailedTalentPool?.users.map((singleMember) => {
               return (
-                <div
-                key={singleMember?._id}
-                className={`members ${expandedMembers[singleMember?._id] ? "expanded" : ""}`}
-              >
-                  <div className="memberNameInfo">{singleMember?.name}</div>
-                  <div className="poolMemberFunctions">
+                <div key={singleMember?._id} className="members">
+                  <div className="memberInfo">
+                    <div className="memberNameInfo">{singleMember?.name}</div>
                     <div className="memberOtherInfo">
                       {userExtraDataArray?.map((field_name) => {
                         return (
-                          <div className="memberSingleOtherInfo">
-                            {singleMember?.[field_name]}
-                          </div>
+                          singleMember?.[field_name] && (
+                            <div
+                              key={field_name}
+                              className="memberSingleOtherInfo"
+                            >
+                              {singleMember[field_name] }
+                            </div>
+                          )
                         );
                       })}
                     </div>
+                  </div>
 
-
-
+                  <div className="poolMemberFunctions">
                     <div className="memberProfilePreview">
                       <GiDominoMask className="iconSize20"></GiDominoMask>
                     </div>

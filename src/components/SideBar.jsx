@@ -5,16 +5,16 @@ import { CiChat1 } from "react-icons/ci";
 
 export default function SideBar() {
   return (
-    <div className="EntireSideBar">
-      <div className="sideBarProfile">
-          <img src={image_link} alt="profile_image" />
-          <div className="sideBarUserInfo">
+    <div className="UserSection">
+      <div className="userProfile">
+          <img className="profile_image" src={image_link} alt="profile_image" />
+          <div className="UserProfileInfo">
             <p>Rahul Sharma</p>
             <p>Hiring high performance</p>
           </div>
       </div>
 
-      <div className="sideBarApplyPool">
+      <div className="ApplyToUserPool">
         <button>Apply to Talent Pool</button>
         <button> 
           <CiChat1 style={{

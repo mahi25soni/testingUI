@@ -19,16 +19,17 @@ export default function UserProfile() {
     {
       id: "about",
       name: "About",
-    }
+    },
   ];
 
   return (
-    <div className="userProfileData">
-      <div className="selectOneOptions">
+    <div className="userProfileSection">
+      <div className="buttons">
         {btns?.map((element) => {
           return (
-            <button onClick={() => setActiveBtn(element?.id)}
-            className={activeBtn === element.id ? "active" : ""} 
+            <button
+              onClick={() => setActiveBtn(element?.id)}
+              className={activeBtn === element.id ? "active" : ""}
             >
               {element?.name}
             </button>

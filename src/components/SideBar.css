@@ -1,4 +1,4 @@
-.EntireSideBar {
+.UserSection {
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
@@ -9,7 +9,7 @@
     overflow-x: hidden;
 }
 
-.EntireSideBar .sideBarProfile {
+.UserSection .userProfile {
     display: flex;
     flex-direction: column; /* Stack the elements vertically */
     justify-content: space-evenly;
@@ -25,14 +25,14 @@
 }
 
 
-.sideBarProfile img {
+.UserSection .userProfile img {
     border-radius: 50%;
     width: 150px;
     height: 150px;
     max-width: 150px;
     min-height: 150px;
 }
-.sideBarProfile .sideBarUserInfo p:nth-child(1){
+.UserSection .userProfile .UserProfileInfo p:nth-child(1){
     font-family: sans-serif;
     font-weight: 600;
     font-size: 1.5rem;
@@ -40,7 +40,7 @@
     line-height: 2px;
 }
 
-.sideBarProfile .sideBarUserInfo p:nth-child(2){
+.UserSection .userProfile .UserProfileInfo p:nth-child(2){
     font-family: sans-serif;
     font-weight: 500;
     font-size: 1rem;
@@ -49,7 +49,7 @@
 }
 
 
-.EntireSideBar .sideBarApplyPool {
+.UserSection .ApplyToUserPool {
     min-height: 60px;
     display: flex;
     justify-content: space-between;
@@ -57,7 +57,7 @@
 
 }
 
-.EntireSideBar .sideBarApplyPool button:nth-child(1){
+.UserSection .ApplyToUserPool button:nth-child(1){
     font-size: 1.2rem;
     font-size: 600;
     border-radius: 10px;
@@ -67,7 +67,7 @@
     max-width: 220px;
 }
 
-.EntireSideBar .sideBarApplyPool button:nth-child(2){
+.UserSection .ApplyToUserPool button:nth-child(2){
     font-size: 1.2rem;
     font-size: 600;
     background-color: transparent;

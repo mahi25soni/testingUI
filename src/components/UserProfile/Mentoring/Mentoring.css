@@ -1,67 +1,97 @@
 .userProfileMentoring {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    flex-wrap: wrap;
+  margin-top: 20px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 .userProfileMentoring .singleSession {
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    max-width: 250px;
-    min-height: 250px;
-    width: 250px;
-    height: 250px;
-    border-radius: 20px;
-    border: 1px solid #E0E0E0;
-    gap: 15px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  min-height: 250px;
+  border-radius: 20px;
+  border: 1px solid #E0E0E0;
+  gap: 15px;
+}
 
-}
 .singleSession .session_type {
-    display: block;
-    border-radius: 10px;
-    background-color: #F7F7F7;
-    padding: 4px 15px;
-    font-weight: 500;
-    font-size: 1rem;
+  display: block;
+  border-radius: 10px;
+  background-color: #F7F7F7;
+  padding: 4px 15px;
+  font-weight: 500;
+  font-size: 1rem;
+  width: 30%;
 }
+
 .singleSession .session_name {
-    font-size: 2rem;
-    font-weight: 600
+  font-size: 2rem;
+  font-weight: 600;
 }
+
 .singleSession .session_desc {
-    font-size: 18px;
-    font-weight: 300;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 2; /* Limit to 2 lines */
-    -webkit-box-orient: vertical;
+  font-size: 14px;
+  font-weight: 300;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Limit to 2 lines */
+  -webkit-box-orient: vertical;
+  color: #b7b6b6;
 }
 
 .singleSession .goIntoSessionDetail {
-    height: 55px;
-    border-radius: 10px;
-    border: 1px solid #E0E0E0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 1.5rem;
-    font-weight: 600;
-    font-size: 18px;
-
-
+  height: 55px;
+  border-radius: 10px;
+  border: 1px solid #E0E0E0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem;
+  font-weight: 600;
+  font-size: 18px;
 }
 
 .singleSession .goIntoSessionDetail .unlockButton {
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    cursor: pointer;
-    font-size: 20px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 20px;
 }
 
+/* Media Queries for Responsiveness */
+
+/* Tablets and smaller devices */
+@media (max-width: 768px) {
+  .userProfileMentoring {
+    grid-template-columns: 1fr;
+    align-items: center;
+  }
+  
+  .singleSession .session_name {
+    font-size: 1.75rem;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 480px) {
+  .singleSession .session_name {
+    font-size: 1.5rem;
+  }
+  
+  .singleSession .session_desc {
+    font-size: 12px;
+  }
+  
+  .singleSession .goIntoSessionDetail {
+    font-size: 16px;
+  }
+  
+  .singleSession .goIntoSessionDetail .unlockButton {
+    font-size: 18px;
+  }
+}

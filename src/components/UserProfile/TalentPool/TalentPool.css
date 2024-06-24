@@ -1,290 +1,175 @@
+/* Desktop view */
 .userProfileTalentPool {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  
 }
 
 .userProfileTalentPool .singleCateogory {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 55px;
-    border: 1px solid #E0E0E0;
-    padding: 0 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 55px;
+  border: 1px solid #E0E0E0;
+  padding: 0 30px;
+  border-radius: 20px;
 }
 
-.userProfileTalentPool .singleCateogory .categoryInfo{
+.userProfileTalentPool .singleCateogory .categoryInfo {
   font-size: 1.2rem;
   font-weight: 400;
 }
+
 .userProfileTalentPool .singleCateogory .viewProfileButton {
   align-self: flex-end;
   background-color: transparent;
-  display: none;
   border: none;
   cursor: pointer;
   font-size: 0.9rem;
   font-weight: 600;
 }
 
-.userProfileTalentPool  .togglePool {
-    padding: 30px;
-    border: 1px solid #E0E0E0;
-} 
+/* Hide the mobile view on desktop */
+.userProfileTalentPoolMobile {
+  display: none;
+}
 
-.userProfileTalentPool  .togglePool .entirePoolActivies {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-} 
-
-.poolSelectAndSend {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  .poolSelectionInfo {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: end;
+/* Mobile view */
+@media screen and (max-width: 768px) {
+  /* Hide the desktop view on mobile */
+  .userProfileTalentPool {
+    display: none;
   }
 
- .userProfileTalentPool .togglePool .entirePoolActivies .poolSelectAndSend div {
-    cursor: pointer;
+  .userProfileTalentPoolMobile {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     gap: 10px;
+
   }
 
-  .userProfileTalentPool .togglePool .entirePoolActivies .poolSelectionInfo .numberOfSelection {
+  .profile-mob {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+  }
+
+  .profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .user-icon {
+    font-size: 40px;
+    color: #000;
+  }
+
+  .userProfiles-relative {
+    display: flex;
+    gap: 5px;
+  }
+
+  .userProfiles-relative img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #fff;
+  }
+
+  .person1-logo {
+    position: relative;
+    z-index: 3;
+  }
+
+  .person2-logo {
+    position: relative;
+    z-index: 2;
+    margin-left: -20px;
+  }
+
+  .person3-logo {
+    position: relative;
+    z-index: 1;
+    margin-left: -20px;
+  }
+  .profile-name{
+    display: flex;
+    column-gap: 3px;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  .singleCategoryMobile {
+    border: 1px solid #E0E0E0;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+  }
+
+  .singleCategoryMobile .categoryHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f0f0f0;
+    padding: 10px;
+    height: 40px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+
+  .singleCategoryMobile .categoryDetails {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-left: 10px;
+  }
+
+  .singleCategoryMobile .categoryName {
+    font-size: 1.2rem;
     font-weight: 600;
   }
 
-  .userProfileTalentPool .togglePool .entirePoolActivies .poolSelectionInfo .extraFunctions {
-    border: 1px solid #E0E0E0;
-    border-radius: 30px;
+  .singleCategoryMobile .userProfiles {
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
-    height: 50px; 
-    min-height: 50px;
-    width: 100px;
-    max-width: 100px;
+    gap: 5px;
+    padding: 10px;
+    background-color: #F7F7F7;
+    position: relative;
   }
 
-  .iconSize20 {
+  .singleCategoryMobile .iconSize20 {
     width: 20px;
-    height: 20px
+    height: 20px;
   }
 
-
-
-  .userProfileTalentPool .togglePool .poolMemberList {
-    margin-top: 20px;
-    
+  .singleCategoryMobile .categoryFooter {
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
-    gap: 10px;
-  }
-
-  .userProfileTalentPool .togglePool .poolMemberList .members {
-    height: 55px;
-    min-height: 55px;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    
-
-  }
-
-  
-  .userProfileTalentPool .togglePool .poolMemberList .members .memberNameInfo{
-    
-    width: 230px;
-    max-width: 230px;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
     align-items: center;
+    margin-top: 10px;
+    padding: 10px;
+  }
+
+  .viewTalentPoolButton {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    /* padding: 5px 10px; */
     border-radius: 20px;
-    border: 1px solid #E0E0E0;
-    font-weight: 600;
-
-  }
-
-  .userProfileTalentPool .togglePool .poolMemberList .members .poolMemberFunctions .dropdownIcon {
-    display: none;
     cursor: pointer;
-    align-items: center;
-  }
-
-    
-  .userProfileTalentPool .togglePool .poolMemberList .members .poolMemberFunctions{
-
-    display: flex;
-    flex-direction: row;
-    gap: 15px;
-
-  }
-
-  .userProfileTalentPool .togglePool .poolMemberList .members .poolMemberFunctions .memberOtherInfo{
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    border-radius: 20px;
-    border: 1px solid #E0E0E0;
-    width: 615px;
-    max-width: 615px;
-  }
-
-  .userProfileTalentPool .togglePool .poolMemberList .members .poolMemberFunctions .memberOtherInfo .memberSingleOtherInfo {
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-
-    border-radius: 10px;
-    border: 1px solid #E0E0E0;
-    width: 90px;
-    max-width: 90px;
-    height: 30px;
-    min-height: 30px;
-  }
-
-  .userProfileTalentPool .togglePool .poolMemberList .members .poolMemberFunctions div:nth-child(2), .userProfileTalentPool .togglePool .poolMemberList .members .poolMemberFunctions div:nth-child(3) {
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-
-    border-radius: 10px;
-    border: 1px solid #E0E0E0;
-    width: 55px;
-    max-width: 55px;
-    cursor: pointer;
-
-  }
-
-
-  .userProfileTalentPool .paymentFooter {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom-left-radius:20px; border-bottom-right-radius:20px;
-    min-height: 55px;
-    border: 1px solid #E0E0E0;
-    padding: 0 30px;
-    background-color: #F7F7F7;
-    font-size: 20px;
-
-}
-
-.paymentFooter .unlockButton {
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    cursor: pointer;
-}
-
-
-
-@media (max-width: 600px) {
-  .userProfileTalentPool .singleCateogory {
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-
-    padding: 20px;
-    border-radius: 20px;
-    border: 1px solid #E0E0E0;
-    height: 250px;
-    margin: 0 auto;
-
-  }
-
-  .userProfileTalentPool .singleCateogory .categoryInfo {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    font-weight: 600;
-    gap: 15px;
-  }
-  .userProfileTalentPool .singleCateogory .categoryInfo .theExtraBar{
-    display: none;
-  }
-
-
-  .userProfileTalentPool .singleCateogory .categoryInfo .categoryName {
-    font-size: 22px;
-    font-weight: 600;
-    align-self: flex-start;
-  }
-
-  .userProfileTalentPool .singleCateogory .categoryInfo .categoryNumber {
     font-size: 1rem;
-    font-weight: 400;
-    align-self: flex-start;
-    color: #505050;
+    padding: 10px;
+    width: auto;
   }
 
-
-  .userProfileTalentPool .singleCateogory .bottomCategoryInfo {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    font-weight: 600;
-    width: 100%;
+  .categoryPrice {
+    font-weight: 500;
   }
-
-  /* .userProfileTalentPool .singleCateogory .categoryPrice {
-    font-size: 0.9rem;
-    font-weight: 600;
-    align-self: flex-start;
-  } */
-
-  .userProfileTalentPool .singleCateogory .viewProfileButton {
-
-    display: block;
-    cursor: pointer;
-    font-size: 20px;
-    font-weight: 400;
-    border: 1px solid #E0E0E0;
-    border-radius: 40px;
-    background-color: #F7F7F7;
-    padding: 15px 20px;
-
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-  
 }
-
-
-
-
-  

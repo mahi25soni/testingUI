@@ -1,11 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { FaUserCircle } from "react-icons/fa"; // Import icons from react-icons
+import { GiThreeFriends } from "react-icons/gi";
 import "./TalentPool.css";
+import Profile from "../../../assets/IMG_2595.JPG";
+import bmw from "../../../assets/bmw.png";
+import person1 from "../../../assets/person1.png";
+import person2 from "../../../assets/person2.png";
+import person3 from "../../../assets/person3.png";
 
 import SingleTalentPool from "./SingleTalentPool";
 
 export default function TalentPool() {
   const [isPoolOpen, setIsPoolOpen] = useState({});
-  const [talentPool, setTalentPool] = useState([]);
   const [detailedTalentPool, setDetailedTalentPool] = useState(null);
 
   const categoryData = [
@@ -38,7 +44,6 @@ export default function TalentPool() {
           name: "Dana Lee",
           city: "Seattle",
           willing_to_relocate: "false",
-
           full_time: "false",
         },
       ],
@@ -118,42 +123,25 @@ export default function TalentPool() {
     },
   ];
 
-  const userExtraDataArray = [
-    "city",
-    "willing_to_relocate",
-    "experienced_years",
-    "number_of_projects",
-    "full_time",
-  ];
-
   const handleShowPool = (categId) => {
-    console.log("open the category id is ", categId);
     setIsPoolOpen((prevState) => ({
+      ...prevState,
       [categId]: !prevState[categId],
     }));
 
-    const something = categoryData
-      ?.filter((e) => e._id === categId)
-      .map((element) => {
-        if (element._id === categId) {
-          return element;
-        }
-      });
-
-    console.log("the something is ", something[0]);
-    setDetailedTalentPool(something[0]);
+    const selectedCategory = categoryData.find((e) => e._id === categId);
+    setDetailedTalentPool(selectedCategory);
   };
 
   const handleHidePool = (categId) => {
-    console.log("close the pool is ", categId);
     setIsPoolOpen((prevState) => ({
+      ...prevState,
       [categId]: !prevState[categId],
     }));
 
     setDetailedTalentPool(null);
   };
 
-  console.log("the detailedTalentPool is ", detailedTalentPool);
   return (
     <>
       {detailedTalentPool ? (
@@ -164,39 +152,82 @@ export default function TalentPool() {
           handleHidePool={handleHidePool}
         />
       ) : (
-        <div className="userProfileTalentPool">
-          {categoryData?.map((data) => {
-            return (
-              <div>
+        <>
+          <div className="userProfileTalentPool">
+            {categoryData.map((data) => (
+              <div key={data._id}>
                 <div
-                  key={data?._id}
                   className="singleCateogory"
-                  onClick={() => handleShowPool(data?._id)}
-                  style={{
-                    borderRadius: "20px",
-                    border: "1px solid #E0E0E0",
-                  }}
+                  onClick={() => handleShowPool(data._id)}
                 >
                   <div className="categoryInfo">
-                    <span className="categoryName">{data?.category_name}</span>
+                    <span className="categoryName">{data.category_name}</span>
                     <span className="theExtraBar">{" | "}</span>
-                    <span className="categoryNumber">{data?.user_number}</span>
+                    <span className="categoryNumber">{data.user_number}</span>
                   </div>
 
                   <div className="bottomCategoryInfo">
-                    <div className="categoryPrice">{data?.category_price}</div>
-                    <button
-                      className="viewProfileButton"
-                      onClick={() => handleShowPool(data?._id)}
-                    >
-                      View Profile
-                    </button>
+                    <div className="categoryPrice" >{data.category_price}</div>
+                   
                   </div>
                 </div>
               </div>
-            );
-          })}
-        </div>
+            ))}
+          </div>
+          <div className="userProfileTalentPoolMobile">
+            {categoryData.map((data) => (
+              <div key={data._id} className="singleCategoryMobile">
+                <div className="categoryHeader">
+                  <div className="categoryDetails">
+                    <span className="categoryName">{data.category_name}</span>
+                  </div>
+                </div>
+                <div className="profile-mob">
+                  <div className="profile-name">
+                    <img src={Profile} alt="Profile" className="profile-img" />
+                    <p>Rahul Sharma</p>
+                  </div>
+                  <div className="profile-logo">
+                    <img src={bmw} alt="Company Logo" className="user-icon" />
+                    {/* <FaUserCircle className="user-icon"/> */}
+                  </div>
+                </div>
+                <div>
+                  <div className="userProfiles">
+                    <div className="userProfiles-relative">
+                      <img
+                        src={person1}
+                        alt="person1"
+                        className="person1-logo"
+                      />
+                      <img
+                        src={person2}
+                        alt="person2"
+                        className="person2-logo"
+                      />
+                      <img
+                        src={person3}
+                        alt="person3"
+                        className="person3-logo"
+                      />
+                    </div>
+                    <span>{data.user_number} profiles</span>
+                  </div>
+                </div>
+
+                <div className="categoryFooter">
+                  <span className="categoryPrice">₹{data.category_price}</span>
+                  <button
+                    className="viewTalentPoolButton"
+                    onClick={() => handleShowPool(data._id)}
+                  >
+                    View Talent Pool
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </>
       )}
     </>
   );

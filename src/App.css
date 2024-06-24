@@ -1,15 +1,18 @@
 .EntireBox {
-   padding: 30px 20px; /* Reduce padding for smaller screens */
-   margin: 0;
+   padding: 0;
+   margin: 0; 
    display: flex;
    flex-direction: row; 
+   font-family: General Sans Variable ;
+   
 }
 
 @media (max-width: 600px) {
    .EntireBox {
    flex-direction: column; 
-      width: 300px;
-      max-width: 350px;
+      /* width: 300px; */
+      /* max-width:auto; */
+   overflow-x: hidden;
 
    }
 }

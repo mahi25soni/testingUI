@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./SingleTalentPool.css";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { IoMdArrowDropdown } from "react-icons/io";
+
 import {
   MdOutlineWavingHand,
   MdDoneAll,
@@ -32,103 +34,74 @@ export default function SingleTalentPool({
     }));
   };
 
-  console.log("is open wala object ", isPoolOpen);
-  console.log("details are ", detailedTalentPool);
-
   return (
     <div className="userProfileDetailedTalentPool">
-      <div
-        key={detailedTalentPool?._id}
-        className="singleCateogory"
-        style={{
-          borderTopLeftRadius: "20px",
-          borderTopRightRadius: "20px",
-          borderBottom: "0", // Remove lower border when condition is true
-          backgroundColor: "#F7F7F7",
-        }}
-      >
-        <div
-          style={{
-            fontSize: "1.2rem",
-            fontWeight: "400",
-          }}
-        >
+      <div key={detailedTalentPool?._id} className="singleCategory">
+        <div className="categoryHeader">
           {isPoolOpen[detailedTalentPool?._id] && (
             <FaArrowLeft
               onClick={() => handleHidePool(detailedTalentPool?._id)}
-              style={{
-                width: "16px",
-                height: "16px",
-                marginRight: "15px",
-                color: "black",
-              }}
-            ></FaArrowLeft>
+              className="arrowIcon"
+            />
           )}
-
           <span>{detailedTalentPool?.category_name}</span>
-          {" | "}
+           {"  | "}
           <span>{detailedTalentPool?.user_number}</span>
         </div>
-
-        <div
-          style={{
-            fontSize: "17px",
-            fontWeight: "600",
-          }}
-        >
+        <div className="categoryPrice">
           {detailedTalentPool?.category_price}
         </div>
       </div>
 
       {isPoolOpen[detailedTalentPool?._id] && (
         <div className="togglePool">
-          <div className="entirePoolActivies">
+          <div className="entirePoolActivities">
             <div className="poolSelectAndSend">
-              <div>
+              <div className="select-icon">
                 <input
                   type="checkbox"
                   id={detailedTalentPool?._id}
                   name="select-all"
                   className="iconSize20"
-                  // onChange={handleSelectMessageCategory}
-                  // checked={
-                  //   !!selectAllUsers[
-                  //     data?._id
-                  //   ]
-                  // }
                 />
                 <label htmlFor={detailedTalentPool?._id}> Select All</label>
               </div>
-              <div
-                className="wavingHand"
-                // onClick={() =>
-                //   setWavehandFunction(
-                //     () => sendMultipleMessagesToUsers
-                //   )
-                // }
-              >
+              <div className="wavingHand1">
                 <MdOutlineWavingHand className="iconSize20" />{" "}
                 <span>Check availability</span>
               </div>
             </div>
-
             <div className="poolSelectionInfo">
               <div className="numberOfSelection">
                 <span>0/21 candidates selected</span>
               </div>
               <div className="extraFunctions">
-                <MdGridView className="iconSize20"></MdGridView>
-                <MdFormatListBulleted className="iconSize20"></MdFormatListBulleted>
+                <MdGridView className="iconSize201" />
+                <MdFormatListBulleted className="iconSize20" />
               </div>
             </div>
           </div>
-
           <div className="poolMemberList">
             {detailedTalentPool?.users.map((singleMember) => {
+              const isExpanded = expandedMembers[singleMember._id] || false;
               return (
-                <div key={singleMember?._id} className="members">
-                  <div className="memberInfo">
-                    <div className="memberNameInfo">{singleMember?.name}</div>
+                <div
+                  key={singleMember?._id}
+                  className={`members ${isExpanded ? "expanded" : ""}`}
+                >
+                  <div className="newmember">
+                    <div className="memberInfo">
+                      <div className="memberNameInfo">
+                        {singleMember?.name}{" "}
+                        <IoMdArrowDropdown
+                          className={`dropdownButton`}
+                          onClick={() => toggleMemberInfo(singleMember?._id)}
+                        />
+                      </div>
+                      <div className="memberProfilePreview1">
+                      <GiDominoMask className="maskicon" />
+                    </div>
+                    </div>
                     <div className="memberOtherInfo">
                       {userExtraDataArray?.map((field_name) => {
                         return (
@@ -137,21 +110,21 @@ export default function SingleTalentPool({
                               key={field_name}
                               className="memberSingleOtherInfo"
                             >
-                              {singleMember[field_name] }
+                              {singleMember[field_name]}
                             </div>
                           )
+                          
                         );
                       })}
+                      
                     </div>
                   </div>
-
                   <div className="poolMemberFunctions">
                     <div className="memberProfilePreview">
-                      <GiDominoMask className="iconSize20"></GiDominoMask>
+                      <GiDominoMask className="maskicon" />
                     </div>
-
                     <div className="wavingHand">
-                      <MdWavingHand className="iconSize20"></MdWavingHand>
+                      <MdWavingHand className="iconSize20" />
                     </div>
                   </div>
                 </div>
@@ -168,7 +141,7 @@ export default function SingleTalentPool({
           </p>
           <div className="unlockButton">
             <p>Unlock</p>
-            <FaArrowRight className="iconSize20"></FaArrowRight>
+            <FaArrowRight className="iconSize20" />
           </div>
         </div>
       )}

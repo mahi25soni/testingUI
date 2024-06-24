@@ -1,297 +1,322 @@
+/* General Styles */
 .userProfileDetailedTalentPool {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    
-
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Arial', sans-serif;
+  border: 1px solid #e0e0e0;
+  border-radius: 20px;
 }
 
-.userProfileDetailedTalentPool .singleCateogory {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 55px;
-    border: 1px solid #E0E0E0;
-    padding: 0 30px;
+.singleCategory {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 55px;
+  /* border: 1px solid #e0e0e0; */
+  padding: 0 30px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-color: #f7f7f7;
 }
 
-.userProfileDetailedTalentPool .singleCateogory .categoryInfo{
+.categoryHeader {
   font-size: 1.2rem;
   font-weight: 400;
+  display: flex;
+  align-items: center;
 }
-.userProfileDetailedTalentPool .singleCateogory .viewProfileButton {
-  align-self: flex-end;
-  background-color: transparent;
-  display: none;
-  border: none;
+
+.arrowIcon {
+  width: 20px;
+  height: 20px;
+  margin-right: 15px;
+  color: black;
   cursor: pointer;
-  font-size: 0.9rem;
+}
+
+.categoryPrice {
+  font-size: 17px;
   font-weight: 600;
 }
 
-.userProfileDetailedTalentPool .togglePool {
-    padding: 30px;
-    border: 1px solid #E0E0E0;
-} 
+.togglePool {
+  padding: 20px;
+}
 
-.userProfileDetailedTalentPool .togglePool .entirePoolActivies {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-} 
+.entirePoolActivities {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
 
 .poolSelectAndSend {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  .poolSelectionInfo {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: end;
-  }
-
-  .userProfileDetailedTalentPool .togglePool .entirePoolActivies .poolSelectAndSend div {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-.userProfileDetailedTalentPool 
-  .togglePool .entirePoolActivies .poolSelectionInfo .numberOfSelection {
-    font-weight: 600;
-  }
-
-  .userProfileDetailedTalentPool .togglePool .entirePoolActivies .poolSelectionInfo .extraFunctions {
-    border: 1px solid #E0E0E0;
-    border-radius: 30px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 50px; 
-    min-height: 50px;
-    width: 100px;
-    max-width: 100px;
-  }
-
-  .iconSize20 {
-    width: 20px;
-    height: 20px
-  }
-
-
-
-  .userProfileDetailedTalentPool .togglePool .poolMemberList {
-    margin-top: 20px;
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 10px;
-  }
-
-  .userProfileDetailedTalentPool .togglePool .poolMemberList .members {
-
-    height: 55px;
-    min-height: 55px;
-    display: flex;
-    gap: 15px;
-    justify-content: space-between;
-
-     
-
-  }
-
-  .userProfileDetailedTalentPool .togglePool .poolMemberList .members .memberInfo {
-    display: flex;
-    justify-content: space-between;
-    flex-grow: 1;
-  }
-
-  
-  .userProfileDetailedTalentPool .togglePool .poolMemberList .members .memberInfo .memberNameInfo{
-    
-    width: 230px;
-    max-width: 230px;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    border-radius: 20px;
-    border: 1px solid #E0E0E0;
-    font-weight: 600;
-
-  }
-
-  .userProfileDetailedTalentPool .togglePool .poolMemberList .members .memberInfo .memberOtherInfo{
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: start;
-    border-radius: 20px;
-    border: 1px solid #E0E0E0;
-    width: 615px;
-    max-width: 615px;
-    gap: 10px;
-    padding: 0 20px;
-  }
-
-  .userProfileDetailedTalentPool .togglePool .poolMemberList .members .memberInfo .memberOtherInfo .memberSingleOtherInfo {
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-
-    border-radius: 10px;
-    border: 1px solid #E0E0E0;
-    width: 90px;
-    max-width: 90px;
-    height: 30px;
-    min-height: 30px;
-  }
-
-
-
-    
-  .userProfileDetailedTalentPool .togglePool .poolMemberList .members .poolMemberFunctions{
-
-    display: flex;
-    flex-direction: row;
-    gap: 15px;
-
-  }
-
-  
-
-  .userProfileDetailedTalentPool .togglePool .poolMemberList .members .poolMemberFunctions div {
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-
-    border-radius: 10px;
-    border: 1px solid #E0E0E0;
-    width: 55px;
-    max-width: 55px;
-    cursor: pointer;
-
-  }
-
-
-  .userProfileDetailedTalentPool .paymentFooter {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom-left-radius:20px; border-bottom-right-radius:20px;
-    min-height: 55px;
-    border: 1px solid #E0E0E0;
-    padding: 0 30px;
-    background-color: #F7F7F7;
-    font-size: 20px;
-
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  flex-direction: column;
 }
 
-.paymentFooter .unlockButton {
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    cursor: pointer;
+.iconSize20 {
+  width: 20px;
+  height: 20px;
+
+}
+.select-icon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.maskicon {
+  width: 20px;
+  height: 20px;
+}
+.memberProfilePreview1 {
+  display: none;
+  
+}
+.iconSize201 {
+  width: 20px;
+  height: 20px;
+  color: #a8a8a8;
+}
+
+.poolSelectionInfo {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-direction: column;
+  row-gap: 7px;
+}
+.numberOfSelection{
+  font-weight: 500;
+}
+
+/* .numberOfSelection {
+  margin-right: 20px;
+} */
+
+.extraFunctions {
+  display: flex;
+  gap: 10px;
+  border: 1px solid #a8a8a8 ;
+  border-radius: 20px;
+  padding: 13px 20px 13px 20px;
 }
 
 
+.poolMemberList {
+  margin-top: 20px;
+}
+
+.members {
+  padding: 10px;
+  margin: 1px ;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* height: auto; */
+}
+
+.memberNameInfo {
+  display: flex;
+  align-items: flex-start;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 20px;
+  /* flex-grow: 1; */
+  width: 150px;
+}
+.newmember{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  /* gap: 6px; */
+}
+
+.memberNameInfo {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.memberOtherInfo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  border: 1px solid #e0e0e0;
+  padding: 13px;
+  border-radius: 20px;
+  width: 500px;
+  /* margin-top: 10px; */
+  /* flex-grow: 2; */
+}
+
+.memberSingleOtherInfo {
+  border: 1px solid #e0e0e0;
+  padding: 6px 8px;
+  border-radius: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f7f7f7;
+}
+
+.poolMemberFunctions {
+  display: flex;
+  gap: 10px;
+  margin-left: 20px;
+}
+
+.paymentFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f7f7f7;
+  border-top: 1px solid #e0e0e0;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.memberProfilePreview,
+.wavingHand {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.unlockButton {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: black;
+  /* padding: 8px 12px; */
+}
+
+.unlockButton p {
+  margin-right: 10px;
+  font-size: 0.9rem;
+}
+
+
+
+.dropdownButton {
+  display: none;
+}
+.newmember{
+  display: flex;
+}
 
 @media (max-width: 600px) {
-  .userProfileDetailedTalentPool .singleCateogory {
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-
-    padding: 20px;
-    border-radius: 20px;
-    border: 1px solid #E0E0E0;
-    height: 250px;
-    margin: 0 auto;
-
+  .memberProfilePreview1{
+    background-color: #fff;
+  border: 1px solid #e0e0e0;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   }
-
-  .userProfileDetailedTalentPool .singleCateogory .categoryInfo {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    font-weight: 600;
-    gap: 15px;
-  }
-  .userProfileDetailedTalentPool .singleCateogory .categoryInfo .theExtraBar{
+  .memberProfilePreview{
     display: none;
   }
-
-
-  .userProfileDetailedTalentPool .singleCateogory .categoryInfo .categoryName {
-    font-size: 22px;
-    font-weight: 600;
-    align-self: flex-start;
-  }
-
-  .userProfileDetailedTalentPool .singleCateogory .categoryInfo .categoryNumber {
-    font-size: 1rem;
-    font-weight: 400;
-    align-self: flex-start;
-    color: #505050;
-  }
-
-
-  .userProfileDetailedTalentPool .singleCateogory .bottomCategoryInfo {
+  .unlockButton {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     align-items: center;
-    font-weight: 600;
+    cursor: pointer;
+    background-color: black;
+    color: #fff;
+    padding: 2px;
+    justify-content: center;
+    margin: 2px;
+    border-radius: 15px;  
+  }
+  .paymentFooter p{
+    width: 50%;
+  }
+  .memberOtherInfo {
+    display: none;
+
+  }
+  .newmember{
+    display: flex;
+    flex-direction: column;
+  }
+  
+
+  .expanded .memberOtherInfo {
+    display: flex;
+    margin-top: 10px;
+    border-radius: 10px;
+    width: 100%;
+
+
+  }
+  .memberSingleOtherInfo{
+    padding: 3px 4px;
+    font-size: small;
+  }
+  
+
+  .dropdownButton {
+    display: flex;
+    border: none;
+    color: black;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    
+    
+  }
+
+  .memberInfo {
+    display: flex;
+    justify-content: space-between;
     width: 100%;
   }
 
-  /* .userProfileDetailedTalentPool .singleCateogory .categoryPrice {
-    font-size: 0.9rem;
-    font-weight: 600;
-    align-self: flex-start;
-  } */
+  .memberNameInfo {
+    display: flex;
+    justify-content: space-between;
 
-  .userProfileDetailedTalentPool .singleCateogory .viewProfileButton {
+    
+  }
+ 
 
-    display: block;
-    cursor: pointer;
-    font-size: 20px;
-    font-weight: 400;
-    border: 1px solid #E0E0E0;
-    border-radius: 40px;
-    background-color: #F7F7F7;
-    padding: 15px 20px;
-
+  .wavingHand1,.wavingHand {
+    display: none;
+  }
+  .iconSize20 {
+    order: 1;
+    margin-right: 10px; /* Add margin for spacing */
   }
 
+  .numberOfSelection {
+    order: 2;
+    margin-top: 10px; /* Add margin for spacing */
+  }
 
+  .extraFunctions {
+    order: 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* flex-grow: 1; */
+    
+    padding: 6px 10px 6px 10px;
+  }
 
-
-
-
-
-
-
-
-
-
+  .poolSelectionInfo {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-end; 
+  }
   
+ 
 }
-
-
-
-
-  

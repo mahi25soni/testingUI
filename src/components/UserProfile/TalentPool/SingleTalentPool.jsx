@@ -34,6 +34,8 @@ export default function SingleTalentPool({
     }));
   };
 
+  console.log("thi esdf ", expandedMembers);
+
   return (
     <div className="userProfileDetailedTalentPool">
       <div key={detailedTalentPool?._id} className="singleCategory">
@@ -44,9 +46,12 @@ export default function SingleTalentPool({
               className="arrowIcon"
             />
           )}
-          <span>{detailedTalentPool?.category_name}</span>
-           {"  | "}
-          <span>{detailedTalentPool?.user_number}</span>
+                  <div className="categoryInfo">
+                    <span className="categoryName">{detailedTalentPool?.category_name}</span>
+                    <span className="theExtraBar">{" | "}</span>
+                    <span className="categoryNumber">{detailedTalentPool?.user_number}</span>
+                  </div>
+
         </div>
         <div className="categoryPrice">
           {detailedTalentPool?.category_price}
@@ -83,25 +88,22 @@ export default function SingleTalentPool({
           </div>
           <div className="poolMemberList">
             {detailedTalentPool?.users.map((singleMember) => {
-              const isExpanded = expandedMembers[singleMember._id] || false;
+              let isExpanded = expandedMembers[singleMember._id] || false;
+              console.log("The expand is ", isExpanded);
               return (
                 <div
                   key={singleMember?._id}
                   className={`members ${isExpanded ? "expanded" : ""}`}
                 >
-                  <div className="newmember">
-                    <div className="memberInfo">
-                      <div className="memberNameInfo">
-                        {singleMember?.name}{" "}
-                        <IoMdArrowDropdown
-                          className={`dropdownButton`}
-                          onClick={() => toggleMemberInfo(singleMember?._id)}
-                        />
-                      </div>
-                      <div className="memberProfilePreview1">
-                      <GiDominoMask className="maskicon" />
+                  <div className="memberInfo">
+                    <div className="memberNameInfo">
+                      {singleMember?.name}{" "}
+                      <IoMdArrowDropdown
+                        className={`dropdownButton`}
+                        onClick={() => toggleMemberInfo(singleMember?._id)}
+                      />
                     </div>
-                    </div>
+
                     <div className="memberOtherInfo">
                       {userExtraDataArray?.map((field_name) => {
                         return (
@@ -113,12 +115,11 @@ export default function SingleTalentPool({
                               {singleMember[field_name]}
                             </div>
                           )
-                          
                         );
                       })}
-                      
                     </div>
                   </div>
+
                   <div className="poolMemberFunctions">
                     <div className="memberProfilePreview">
                       <GiDominoMask className="maskicon" />

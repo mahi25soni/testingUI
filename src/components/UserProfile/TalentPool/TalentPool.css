@@ -37,7 +37,7 @@
 }
 
 /* Mobile view */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
   /* Hide the desktop view on mobile */
   .userProfileTalentPool {
     display: none;

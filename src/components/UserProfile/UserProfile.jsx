@@ -23,8 +23,8 @@ export default function UserProfile() {
   ];
 
   return (
-    <div className="userProfileSection">
-      <div className="buttons">
+    <div className="userProfileData">
+      <div className="selectOneOptions">
         {btns?.map((element) => {
           return (
             <button

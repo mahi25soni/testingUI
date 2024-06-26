@@ -22,12 +22,14 @@ export default function TalentPool() {
       category_price: 5000,
       users: [
         {
+          _id : 1,
           name: "Alice Johnson",
           city: "Francisco",
           willing_to_relocate: "true",
           full_time: "true",
         },
         {
+          _id : 2,
           name: "Bob Smith",
           city: "New York",
           willing_to_relocate: "false",
@@ -35,12 +37,14 @@ export default function TalentPool() {
           full_time: "false",
         },
         {
+          _id : 3,
           name: "Charlie Davis",
           experienced_years: 7,
           number_of_projects: 20,
           full_time: "true",
         },
         {
+          _id : 4,
           name: "Dana Lee",
           city: "Seattle",
           willing_to_relocate: "false",
